@@ -14106,7 +14106,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604086781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.1223042, y: 0.2455432, z: -0.16860731}
+  m_LocalPosition: {x: 5.5, y: 4.2, z: -0.16860731}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1076806944}
@@ -14144,7 +14144,7 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604086781}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -14168,10 +14168,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc6fa6bb57556045ba0db0fc7c990ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currenState: 0
   health: 10
   enemyName: Logg
-  baseAttack: 4
-  moveSpeed: 0
+  baseAttack: 2
+  moveSpeed: 1
+  animator: {fileID: 0}
+  target: {fileID: 1095322510}
+  homePosition: {fileID: 0}
+  chaseRadius: 4
+  attackRadius: 1
+  anim: {fileID: 0}
 --- !u!4 &629987190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4627721682820932, guid: 04c22251b02ac2a4eab53c074cd83a71,
