@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - breakable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2245321119
+    locked: 0
+  - name: Collision
+    uniqueID: 1746568249
+    locked: 0
+  - name: Decors
+    uniqueID: 379859551
+    locked: 0
+  - name: Signs
+    uniqueID: 328793661
+    locked: 0
+  - name: breakable
+    uniqueID: 1488252037
+    locked: 0
+  - name: Enemy
+    uniqueID: 3665017987
+    locked: 0
+  - name: Player
+    uniqueID: 3563986459
+    locked: 0
+  - name: Roof
+    uniqueID: 4021230317
+    locked: 0
