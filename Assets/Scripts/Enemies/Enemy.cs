@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum EnemyState
 {
-    idle, idle2, attack, die
+    idle, idle2, attack, stagger, dead
 }
 
 public class Enemy : MonoBehaviour
@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    
+    public Vector3 change;
     public Animator animator;
 
 	// Use this for initialization
