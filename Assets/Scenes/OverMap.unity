@@ -167,11 +167,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.29805806, y: 0.8252996}
-      - {x: -0.8256581, y: 0.47693193}
-      - {x: -0.97473896, y: -0.20032579}
-      - {x: -0.80409193, y: -0.52714825}
-      - {x: -0.32321328, y: -0.94433665}
+    - - {x: -0.102882504, y: 0.6843396}
+      - {x: -0.8907167, y: 0.50946116}
+      - {x: -1.0397975, y: -0.059365436}
+      - {x: -0.81493497, y: -0.6355792}
+      - {x: -0.16056716, y: -0.9118075}
       - {x: -0.035232186, y: -0.34421766}
       - {x: -0.032786965, y: 0.11632168}
 --- !u!114 &8364599
@@ -13000,7 +13000,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14030,7 +14030,7 @@ GameObject:
   - component: {fileID: 604086787}
   m_Layer: 0
   m_Name: Log1
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14124,7 +14124,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010852575, y: -0.6353071}
+  m_Offset: {x: -0.015204191, y: -0.42231476}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14135,7 +14135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.81609964, y: 0.523623}
+  m_Size: {x: 0.6595092, y: 0.9496076}
   m_EdgeRadius: 0
 --- !u!50 &604086786
 Rigidbody2D:
@@ -14144,17 +14144,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604086781}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5000
+  m_Mass: 1.2
   m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 1
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &604086787
@@ -14168,17 +14168,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc6fa6bb57556045ba0db0fc7c990ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currenState: 0
+  currentState: 0
   health: 10
   enemyName: Logg
-  baseAttack: 2
-  moveSpeed: 1
+  baseAttack: 15
+  moveSpeed: 1.5
+  change: {x: 0, y: 0, z: 0}
   animator: {fileID: 0}
   target: {fileID: 1095322510}
   homePosition: {fileID: 0}
   chaseRadius: 4
   attackRadius: 1
-  anim: {fileID: 0}
+  wakeRadius: 5
 --- !u!4 &629987190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4627721682820932, guid: 04c22251b02ac2a4eab53c074cd83a71,
@@ -14385,13 +14386,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.95443827, y: -0.19391437}
-      - {x: 0.71672744, y: 0.30525517}
-      - {x: 0.45590514, y: 0.46629715}
+    - - {x: 0.98696804, y: -0.2264436}
+      - {x: 0.7058844, y: 0.40284288}
+      - {x: 0.14145543, y: 0.69400257}
       - {x: 0.016919792, y: 0.037569568}
       - {x: 0.05839908, y: -0.29887056}
-      - {x: 0.22990182, y: -0.66084397}
-      - {x: 0.7309986, y: -0.6327692}
+      - {x: 0.1540004, y: -0.83433336}
+      - {x: 0.7960574, y: -0.7086708}
 --- !u!114 &693508838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24054,8 +24055,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1002521867}
-  - component: {fileID: 1002521868}
   - component: {fileID: 1002521869}
+  - component: {fileID: 1002521868}
   m_Layer: 0
   m_Name: front hitbox
   m_TagString: Untagged
@@ -24100,12 +24101,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.04153818, y: -0.19910075}
-      - {x: -0.1924336, y: -0.21103652}
-      - {x: -0.7858487, y: -0.20184244}
-      - {x: -0.5560906, y: -0.95415634}
-      - {x: 0.43715137, y: -1.0917125}
-      - {x: 0.35401532, y: -0.32197344}
+    - - {x: 0.012254596, y: -0.2009542}
+      - {x: -0.71209127, y: -0.21180496}
+      - {x: -0.5755306, y: -0.94994533}
+      - {x: 0.00001591444, y: -1.158274}
+      - {x: 0.57553077, y: -0.92543584}
+      - {x: 0.71821845, y: -0.22405964}
 --- !u!114 &1002521869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28299,7 +28300,7 @@ GameObject:
   - component: {fileID: 1076806944}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28328,9 +28329,10 @@ GameObject:
   - component: {fileID: 1095322510}
   - component: {fileID: 1095322509}
   - component: {fileID: 1095322508}
-  - component: {fileID: 1095322507}
   - component: {fileID: 1095322511}
   - component: {fileID: 1095322512}
+  - component: {fileID: 1095322507}
+  - component: {fileID: 1095322513}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -28474,6 +28476,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1095322513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1095322506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0b93ba3528de843ba6295cdef34373, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 3
+  knockTime: 0.5
 --- !u!1 &1109716331
 GameObject:
   m_ObjectHideFlags: 0
@@ -42270,10 +42285,12 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.41974115, y: 0.75033647}
-      - {x: -0.14038253, y: 0.84343684}
+      - {x: -0.13326868, y: 0.8743998}
+      - {x: -0.63795114, y: 0.71526945}
+      - {x: -0.9102417, y: -0.078225866}
       - {x: -0.066303074, y: -0.18550503}
-      - {x: 0.701645, y: -0.21951509}
-      - {x: 0.6464517, y: 0.5252358}
+      - {x: 0.7558608, y: -0.07855508}
+      - {x: 0.5163345, y: 0.4601773}
 --- !u!114 &1789020102
 MonoBehaviour:
   m_ObjectHideFlags: 0
