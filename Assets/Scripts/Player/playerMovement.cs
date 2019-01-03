@@ -4,14 +4,14 @@ using UnityEngine;
 
 public enum PlayerState
 {
-    walk, run, attack, interact
+    idle, walk, run, attack, stagger, interact
 }
 
 public class playerMovement : MonoBehaviour
 {
     public PlayerState currentState;
     public float speed;
-    private Rigidbody2D myRigidBody;
+    private Rigidbody2D myRigidbody;
     private Vector3 change;
     private Animator animator;
 
@@ -20,7 +20,7 @@ public class playerMovement : MonoBehaviour
     {
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
-        myRigidBody = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();
         animator.SetFloat("moveX", 0);
         animator.SetFloat("moveY", 0);
 	}
@@ -31,7 +31,7 @@ public class playerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal");
         change.y = Input.GetAxisRaw("Vertical");
-        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack)
+        if (Input.GetButtonDown("attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
         }
@@ -51,6 +51,11 @@ public class playerMovement : MonoBehaviour
         }
     }
 
+    public void Knock(float knockTime)
+    {
+        StartCoroutine(KnockCo(knockTime));
+    }
+
     private IEnumerator AttackCo()
     {
         animator.SetBool("attacking", true);
@@ -59,6 +64,16 @@ public class playerMovement : MonoBehaviour
         animator.SetBool("attacking", false);
         yield return new WaitForSeconds(.1f); // Allow animation cancel
         currentState = PlayerState.walk;
+    }
+
+    private IEnumerator KnockCo(float knockTime)
+    {
+        if (myRigidbody != null )
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = PlayerState.idle;
+        }
     }
 
     void UpdateAnimationAndMove()
@@ -76,6 +91,6 @@ public class playerMovement : MonoBehaviour
 
     void MoveCharacter()
     {
-        myRigidBody.MovePosition(transform.position + (change.normalized * speed * Time.deltaTime));
+        myRigidbody.MovePosition(transform.position + (change.normalized * speed * Time.deltaTime));
     }
 }

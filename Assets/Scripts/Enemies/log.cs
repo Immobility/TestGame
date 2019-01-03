@@ -26,7 +26,6 @@ public class Log : Enemy
     void FixedUpdate()
     {
         CheckDistance();
-
     }
 
     void CheckDistance()

@@ -14,19 +14,21 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
-    
     public Vector3 change;
     public Animator animator;
 
-	// Use this for initialization
-	void Start()
+    public void Knock(Rigidbody2D myRigidbody, float knockTime)
     {
+        StartCoroutine(KnockCo(myRigidbody, knockTime));
+    }
 
-	}
-	
-	// Update is called once per frame
-	void Update()
+    private IEnumerator KnockCo(Rigidbody2D myRigidbody, float knockTime)
     {
-		
-	}
+        if (myRigidbody != null && currentState != EnemyState.stagger)
+        {
+            yield return new WaitForSeconds(knockTime);
+            myRigidbody.velocity = Vector2.zero;
+            currentState = EnemyState.stagger;
+        }
+    }
 }
