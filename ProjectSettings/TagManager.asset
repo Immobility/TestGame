@@ -46,6 +46,9 @@ TagManager:
   - name: Ground
     uniqueID: 2245321119
     locked: 0
+  - name: Hole
+    uniqueID: 3483989713
+    locked: 0
   - name: Collision
     uniqueID: 1746568249
     locked: 0
