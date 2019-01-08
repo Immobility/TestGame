@@ -9,3 +9,5 @@ https://opengameart.org/content/zelda-like-tilesets-and-sprites
 https://opengameart.org/content/tuxemon-tileset
 
 https://opengameart.org/content/tileset-and-characters-unfinished
+
+https://forums.rpgmakerweb.com/index.php?threads/marus-mv-bits.46811/ by PandaMaru
