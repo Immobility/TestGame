@@ -14,4 +14,4 @@ https://forums.rpgmakerweb.com/index.php?threads/marus-mv-bits.46811/ by PandaMa
 
 The demo can be found on:
 
-https://www.dropbox.com/sh/zkfqj80cz1l8o5h/AACYRo8mTjVJ0oT5TxWpCTRXa?dl=0
+https://www.dropbox.com/sh/l1exwhz0deas2gj/AABe18nihQ8m-idVbtZs3J43a?dl=0
