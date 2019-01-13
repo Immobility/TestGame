@@ -16,5 +16,6 @@ The demo can be found on:
 
 https://www.dropbox.com/sh/l1exwhz0deas2gj/AABe18nihQ8m-idVbtZs3J43a?dl=0
 
+Trying to find a way to fix the camera when going on edges
 
 Currently on hiatus to resume after learning 3D engine
